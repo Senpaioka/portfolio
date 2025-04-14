@@ -1,0 +1,161 @@
+@font-face {
+    font-family: os_bold;
+    src: url(/fonts/OpenSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: os_reg;
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: os_light;
+    src: url(/fonts/OpenSans-Light.ttf);
+}
+
+
+body {
+    font-family: os_light;
+}
+
+.upper-bar {
+    background-color: #09122C;
+    padding: 10px 0px 10px;
+}
+
+.upper-bar a {
+    color: white;
+    font-size: 22px;
+    padding: 0px 20px 0px;
+}
+
+
+/* type writer css */
+
+.centeredBox {
+	width: 100%;
+	text-align: center;
+}
+
+.cursor {
+	border-left: 4px solid white;
+}
+
+
+/* hero section */
+
+.bg-hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url('/img/bg.jpg');
+}
+
+
+.left-block {
+    background-image: url('/img/dp/pic.jpg');
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 30%;
+}
+
+.right-block {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.right-block h3 {
+    font-family: os_light;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.right-block h1 {
+    font-family: os_bold;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+.centeredBox h3 {
+    font-family: os_light;
+    font-size: 30px;
+}
+
+
+/* skills */
+.skill-text {
+    margin-top: 20px;
+}
+
+.skill-text h3 {
+    font-family: os_reg;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+/* badges */
+.badge-cert {
+    margin-top: 60px;
+}
+
+.badge-cert h3 {
+    font-family: os_reg;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+/* project */
+.project-title {
+    margin-top: 60px;
+}
+
+.project-title h3 {
+    font-family: os_reg;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.project-title p {
+    font-family: os_bold;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.project-link {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.project-link h5 {
+    font-family: os_bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* certification */
+.cert-title {
+    margin-top: 60px;
+}
+
+.cert-title h3 {
+    font-family: os_reg;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+
+/* footer */
+.foot-bar {
+    margin-top: 50px;
+    background-color: #09122C;
+    padding: 10px 0px 10px;
+    color: aliceblue;
+}
