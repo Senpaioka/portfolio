@@ -1,16 +1,16 @@
 @font-face {
     font-family: os_bold;
-    src: url(/fonts/OpenSans-Medium.ttf);
+    src: url(../../fonts/OpenSans-Medium.ttf);
 }
 
 @font-face {
     font-family: os_reg;
-    src: url(/fonts/OpenSans-Regular.ttf);
+    src: url(../../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
     font-family: os_light;
-    src: url(/fonts/OpenSans-Light.ttf);
+    src: url(../../fonts/OpenSans-Light.ttf);
 }
 
 
@@ -49,12 +49,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    background-image: url('/img/bg.jpg');
+    background-image: url('../../img/bg.jpg');
 }
 
 
 .left-block {
-    background-image: url('/img/dp/pic.jpg');
+    background-image: url('../../img/dp/pic.jpg');
     width: 100%;
     height: 300px;
     object-fit: cover;
