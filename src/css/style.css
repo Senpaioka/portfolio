@@ -89,6 +89,10 @@ body {
     font-size: 30px;
 }
 
+.cv-box {
+
+}
+
 
 /* skills */
 .skill-text {
@@ -110,6 +114,10 @@ body {
     font-family: os_reg;
     font-size: 30px;
     padding-bottom: 20px;
+}
+
+.badge-flow {
+    overflow: hidden;
 }
 
 /* project */
@@ -138,6 +146,10 @@ body {
     font-family: os_bold;
     font-size: 20px;
     margin-bottom: 20px;
+}
+
+.card-body {
+    overflow: hidden;
 }
 
 /* certification */
@@ -190,4 +202,43 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+
+/* responsive css */
+
+@media (max-width: 575.98px) {
+    .skill-text h3 {
+        margin-top: 50px;
+    }
+
+    .left-block {
+        width: 150%;
+        margin-top: 30%;
+    }
+
+    .right-block {
+        padding-top: 100px;
+    }
+
+    .right-block h3 {
+        font-size: 30px;
+        letter-spacing: 0px;
+    }
+
+    .right-block h1 {
+        font-size: 35px;
+        letter-spacing: 0px;
+    }
+
+    .right-block h3 {
+        font-size: 20px;
+        letter-spacing: 0px;
+        min-height: 50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
 }
