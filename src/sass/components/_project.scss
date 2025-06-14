@@ -1,0 +1,67 @@
+@use "./base" as *;
+
+.project {
+
+    &__container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-family: $font-regular;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: var(--color-light);
+        padding: 2rem 1rem;
+        letter-spacing: .3rem;
+    }
+
+    &__warning {
+        font-family: $font-bold;
+        font-size: 1.2rem;
+        color: red;
+        padding: 1rem 1rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-rows: auto;
+        gap: 1rem;
+        justify-items: center;
+        align-items: center;
+        padding: 3rem 1rem;
+        
+        &--card {
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: all .3s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        &--title {
+            font-family: $font-regular;
+            font-size: 1.8rem;
+            color: var(--color-dark);
+            text-transform: capitalize;
+            padding-top: 15px;
+        }
+
+        &--subtext {
+            font-family: $font-light;
+            font-size: 1.6rem;
+            color: var(--color-darkest);
+            text-transform: capitalize;
+        }
+
+        &--link {
+            margin-top: 20px;
+        }
+
+    }
+
+}

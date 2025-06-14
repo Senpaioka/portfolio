@@ -1,0 +1,21 @@
+@use "./base" as *;
+
+.footer {
+    background-color: var(--color-dark);
+
+    &__container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 5rem;
+
+        p {
+            font-family: $font-regular;
+            font-size: 1.8rem;
+            color: var(--color-white);
+            text-transform: capitalize;
+        }
+    }
+}

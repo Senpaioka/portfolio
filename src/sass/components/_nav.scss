@@ -1,0 +1,49 @@
+@use "./base" as *;
+
+.upper-bar {
+    background-color: var(--color-dark);
+
+    &-container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1rem;
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        a {
+            font-size: 22px;
+            color: var(--color-white);
+            transition: all .3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+
+            &:last-child {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    &-email {
+
+        a {
+            font-size: 20px;
+            color: var(--color-white);
+            transition: all .3s ease;
+
+            &:hover {
+                color: var(--color-light);
+            }
+        }
+    }
+}

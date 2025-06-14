@@ -1,0 +1,38 @@
+@use "./base" as *;
+
+.badge {
+
+    &__container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-family: $font-regular;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: var(--color-light);
+        padding: 2rem 1rem;
+        letter-spacing: .3rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 3rem 1rem;
+    }
+}
+
+
+// badges
+.badge-flow p {
+    font-family: $font-light;
+    font-size: 1.4rem;
+    color: var(--color-darkest);
+    text-transform: capitalize;
+}

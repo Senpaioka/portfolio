@@ -1,0 +1,39 @@
+@use "./base" as *;
+
+.certificate {
+
+    &__container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-family: $font-regular;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: var(--color-light);
+        padding: 2rem 1rem;
+        letter-spacing: .3rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 3rem 1rem;
+
+        &--cert {
+
+            p {
+            font-family: $font-regular;
+            font-size: 1.6rem;
+            color: var(--color-darkest);
+            padding: 1rem 1rem;
+        }
+        }
+    }
+}

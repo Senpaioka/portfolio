@@ -1,0 +1,78 @@
+@use "./base" as *;
+
+
+.hero {
+
+    background-image: url(/assets/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__container {
+        max-width: 1200px;
+        width: 100%;
+        height: 60vh;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        gap: 1rem;
+
+        @media screen and (max-width: 810px) {
+            height: 90vh;
+        }
+    }
+
+    &__left-block {
+        padding: 2rem 3rem;
+
+        &--profile {
+            width: 220px;
+            height: 220px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            overflow: hidden;
+            padding: 1rem 1rem;
+        }
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    &__right-block {
+
+        padding: 1rem 1rem;
+
+        &--greet {
+            font-family: $font-light;
+            font-size: 4rem;
+            color: var(--color-light);
+            text-transform: capitalize;
+            letter-spacing: 1rem;
+        }
+
+        &--name {
+            font-family: $font-bold;
+            font-size: 6rem;
+            color: var(--color-light);
+            text-transform: capitalize;
+        }
+    }
+
+    &__btn {
+        margin-top: 5rem;
+    }
+}
+
+// type-writer
+.centeredBox h3 {
+    font-family: $font-light;
+    font-size: 3rem;
+    color: var(--color-light);
+    text-transform: capitalize;
+}

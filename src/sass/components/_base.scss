@@ -1,0 +1,84 @@
+
+// font settings
+@font-face {
+    font-family: os_bold;
+    src: url(/assets/fonts/OpenSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: os_reg;
+    src: url(/assets/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: os_light;
+    src: url(/assets/fonts/OpenSans-Light.ttf);
+}
+
+$font-bold: os_bold;
+$font-light: os_light;
+$font-regular: os_reg;
+
+
+
+// color palette
+:root {
+    --color-dark: #1C2341;
+    --color-white: #ffffff;
+    --color-light: #394F6B;
+    --color-darkest: #121B2B;
+}
+
+
+/* common page settings */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+
+
+  @media screen and (max-width: 900px) {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 50%; /* 1rem = 8px */
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: $font-regular, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    font-family: $font-regular;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    background: var(--color-dark);
+    padding: .5rem 2rem;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    background: var(--color-light);
+}
+
