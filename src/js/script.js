@@ -94,18 +94,12 @@ scrollToTopBtn.addEventListener("click", function () {
 
 
 // loader
-window.addEventListener("load", function () {
-const loader = document.getElementById("loader-wrapper");
-loader.style.display = "none"; // Hide loader once page fully loads
-});
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader-wrapper");
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 0.5s ease";
 
-window.addEventListener("load", function () {
-	const loader = document.getElementById("loader-wrapper");
-	loader.style.opacity = "0";
-	loader.style.transition = "opacity 0.5s ease";
-  
-	setTimeout(() => {
-	  loader.style.display = "none";
-	}, 500);
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
   });
-  

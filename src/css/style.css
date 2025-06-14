@@ -66,6 +66,36 @@ a {
   background: var(--color-light);
 }
 
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Spinner */
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--color-white);
+  border-top-color: var(--color-light);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .upper-bar {
   background-color: var(--color-dark);
 }
