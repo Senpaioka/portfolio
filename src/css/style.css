@@ -1,14 +1,14 @@
 @font-face {
   font-family: os_bold;
-  src: url(/assets/fonts/OpenSans-Medium.ttf);
+  src: url(../../assets/fonts/OpenSans-Medium.ttf);
 }
 @font-face {
   font-family: os_reg;
-  src: url(/assets/fonts/OpenSans-Regular.ttf);
+  src: url(../../assets/fonts/OpenSans-Regular.ttf);
 }
 @font-face {
   font-family: os_light;
-  src: url(/assets/fonts/OpenSans-Light.ttf);
+  src: url(../../assets/fonts/OpenSans-Light.ttf);
 }
 :root {
   --color-dark: #1C2341;
@@ -106,7 +106,7 @@ a {
 }
 
 .hero {
-  background-image: url(/assets/img/bg.jpg);
+  background-image: url(../../assets/img/bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
