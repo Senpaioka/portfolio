@@ -17,6 +17,10 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
 
+        @media screen and (max-width: 400px) {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
         @media screen and (max-width: 320px) {
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         }
@@ -36,6 +40,14 @@
 
             &:hover {
                 color: var(--color-grey);
+            }
+
+            @media screen and (max-width: 320px) {
+                margin-right: 10px;
+            }
+
+            @media screen and (max-width: 400px) {
+                margin-right: 15px;
             }
 
         }

@@ -186,6 +186,11 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
+@media screen and (max-width: 400px) {
+  .upper-bar-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
 @media screen and (max-width: 320px) {
   .upper-bar-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -204,6 +209,16 @@ a {
 }
 .upper-bar-link a:hover {
   color: var(--color-grey);
+}
+@media screen and (max-width: 320px) {
+  .upper-bar-link a {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .upper-bar-link a {
+    margin-right: 15px;
+  }
 }
 .upper-bar-extra {
   justify-self: end;
