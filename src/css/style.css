@@ -15,6 +15,7 @@
   --color-white: #ffffff;
   --color-light: #394F6B;
   --color-darkest: #121B2B;
+  --color-grey: #707070;
 }
 
 /* common page settings */
@@ -76,11 +77,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 999;
   transition: opacity 0.5s ease;
 }
 
-/* Spinner */
 .loader {
   width: 50px;
   height: 50px;
@@ -90,12 +90,84 @@ a {
   animation: spin 1s linear infinite;
 }
 
-/* Spinner Animation */
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
+/* making hand emoji move */
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%; /* pivot point for natural waving */
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* move to up button */
+.up-arrow {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 1;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  background-color: #394F6B;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .up-arrow {
+    bottom: 80px;
+    right: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .up-arrow {
+    bottom: 80px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .up-arrow {
+    bottom: 80px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .up-arrow {
+    bottom: 80px;
+    right: 20px;
+  }
+}
+
 .upper-bar {
   background-color: var(--color-dark);
 }
@@ -107,32 +179,45 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: auto;
   align-items: center;
-  justify-content: center;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
+}
+@media screen and (max-width: 500px) {
+  .upper-bar-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media screen and (max-width: 320px) {
+  .upper-bar-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
 .upper-bar-link {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
+  display: inline-block;
 }
 .upper-bar-link a {
   font-size: 22px;
   color: var(--color-white);
   transition: all 0.3s ease;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  padding: 5px 5px;
 }
 .upper-bar-link a:hover {
-  transform: translateY(-2px);
+  color: var(--color-grey);
 }
-.upper-bar-link a:last-child {
-  padding-top: 10px;
+.upper-bar-extra {
+  justify-self: end;
 }
-.upper-bar-email a {
+.upper-bar-extra a {
   font-size: 20px;
   color: var(--color-white);
   transition: all 0.3s ease;
 }
-.upper-bar-email a:hover {
-  color: var(--color-light);
+.upper-bar-extra a:hover {
+  color: var(--color-grey);
+}
+.upper-bar-extra a:last-child {
+  font-size: 2rem;
 }
 
 .hero {
@@ -156,6 +241,13 @@ a {
 @media screen and (max-width: 810px) {
   .hero__container {
     height: 90vh;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media screen and (max-width: 320px) {
+  .hero__container {
+    height: 90vh;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 .hero__left-block {
@@ -168,10 +260,31 @@ a {
   overflow: hidden;
   padding: 1rem 1rem;
 }
+@media screen and (max-width: 320px) {
+  .hero__left-block--profile {
+    width: 180px;
+    height: 180px;
+  }
+}
 .hero__left-block--img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.hero__left-block--connect {
+  margin-top: 3rem;
+}
+.hero__left-block--title {
+  font-family: os_bold;
+  font-size: 2rem;
+  color: var(--color-light);
+}
+.hero__left-block--email {
+  display: inline-block;
+  font-family: os_light;
+  font-size: 1.6rem;
+  color: var(--color-light);
+  margin-top: 10px;
 }
 .hero__right-block {
   padding: 1rem 1rem;
@@ -191,6 +304,16 @@ a {
 }
 .hero__btn {
   margin-top: 5rem;
+}
+@media screen and (max-width: 500px) {
+  .hero {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hero {
+    text-align: center;
+  }
 }
 
 .centeredBox h3 {
@@ -291,10 +414,44 @@ a {
   align-items: center;
   padding: 3rem 1rem;
 }
+@media screen and (max-width: 1050px) {
+  .project__item {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media screen and (max-width: 900px) {
+  .project__item {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media screen and (max-width: 700px) {
+  .project__item {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+@media screen and (max-width: 530px) {
+  .project__item {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 400px) {
+  .project__item {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
 .project__item--card {
   padding: 2rem 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: all 0.3s;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.project__item--card img {
+  width: 500px;
+  width: 100%;
+  object-fit: cover;
 }
 .project__item--card:hover {
   transform: translateY(-5px);
@@ -338,11 +495,49 @@ a {
   gap: 1rem;
   padding: 3rem 1rem;
 }
+@media screen and (max-width: 500px) {
+  .certificate__item {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 400px) {
+  .certificate__item {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.certificate__item--cert {
+  width: 100%;
+  object-fit: cover;
+}
+.certificate__item--cert img {
+  width: 100%;
+  max-width: 100%;
+}
 .certificate__item--cert p {
   font-family: os_reg;
   font-size: 1.6rem;
   color: var(--color-darkest);
   padding: 1rem 1rem;
+}
+@media screen and (max-width: 700px) {
+  .certificate__item--cert {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .certificate__item--cert {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .certificate__item--cert {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .certificate__item--cert {
+    text-align: center;
+  }
 }
 
 .footer {

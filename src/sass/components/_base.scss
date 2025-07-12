@@ -27,6 +27,7 @@ $font-regular: os_reg;
     --color-white: #ffffff;
     --color-light: #394F6B;
     --color-darkest: #121B2B;
+    --color-grey: #707070;
 }
 
 
@@ -94,23 +95,78 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 999;
   transition: opacity 0.5s ease;
 }
 
-/* Spinner */
 .loader {
   width: 50px;
   height: 50px;
   border: 6px solid var(--color-white);
-  border-top-color: var(--color-light); 
+  border-top-color: var(--color-light);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
-/* Spinner Animation */
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+/* making hand emoji move */
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%; /* pivot point for natural waving */
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+/* move to up button */
+
+.up-arrow {
+  display: none; 
+  position: fixed; 
+  bottom: 100px; 
+  right: 100px; 
+  z-index: 1; 
+  padding: 10px 15px; 
+  font-size: 18px; 
+  border: none; 
+  background-color: #394F6B; 
+  color: white; 
+  border-radius: 5px; 
+  cursor: pointer;
+
+  @media screen and (max-width: 700px) {
+    bottom: 80px; 
+    right: 30px; 
+  }
+
+  @media screen and (max-width: 600px) {
+    bottom: 80px; 
+    right: 20px; 
+  }
+
+  @media screen and (max-width: 500px) {
+    bottom: 80px; 
+    right: 20px; 
+  }
+
+  @media screen and (max-width: 320px) {
+    bottom: 80px; 
+    right: 20px; 
   }
 }
